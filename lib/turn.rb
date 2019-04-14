@@ -43,6 +43,11 @@ end
 def turn(board)
 
   index = get_index
+
+  puts "Where would you like to go?"
+  input = gets.strip
+  
+  index = input_to_index(input)
   
   if valid_move?(board,index)
     move(board, index, "X")
@@ -62,4 +67,5 @@ def get_index
   index = input_to_index(input)
   
   return index
+
 end
